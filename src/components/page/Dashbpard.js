@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const Dashboard = () => {
     const [name, setName] = useState('INTIATED  Name')
-    const [users,setUsers] = useState([])
+    const [users, setUsers] = useState([])
 
     const changeValue = () => {
         // console.log(name)
@@ -25,13 +25,10 @@ export const Dashboard = () => {
         <div>
             <p className='textColor'>{name}</p>
             <button onClick={() => fetchvalue()}>change </button>
-            {  users.length == 0 ? <p className='textColor'>NO Data </p> : users.map((user )=>{
-                return(
-                    <p className='textColor'>
-                        {user.name}
-                        </p>
-                )
-            })}
+            {users.length == 0 ? <p className='textColor'>NO Data </p> : users.map((user) => {
+                return (<p className='textColor'>{user.name}</p>)
+            })
+            }
         </div>
     )
 }

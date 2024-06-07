@@ -17,6 +17,10 @@ export const Navbar = () => {
       <button onClick={() => navigate('/third')}>third</button>
       </p>
 
+      <p className='navbarText'>
+      <button onClick={() => navigate('/form')}>form</button>
+      </p>
+
 
     </div>
   )
